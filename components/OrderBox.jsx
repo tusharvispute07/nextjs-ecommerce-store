@@ -3,7 +3,7 @@ import styles from "@/styles/OrderBox.module.css"
 export default function OrderBox({order}){
 
     return(
-        <div className={styles.orders_container}>
+        <div key={order._id.toString()} className={styles.orders_container}>
             <div className={styles.order_title_container}>
                 <p><span id={styles.title}>Order ID:</span> {order._id.toString()}</p>
                 <p><span id={styles.title}>Order Status:</span> <span>Confirm</span></p>

@@ -8,7 +8,6 @@ export default function ProductBox({ _id, title, images, description, price }) {
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   useEffect(() => {
-    // Set initial state based on whether the product is in the wishlist
     setIsWishlisted(wishlistedProducts.includes(_id));
   }, [wishlistedProducts, _id]);
 
@@ -21,7 +20,7 @@ export default function ProductBox({ _id, title, images, description, price }) {
   }
 
   return (
-    <div className={styles.product_container}>
+    <div key={_id.toString()} className={styles.product_container}>
       <div className={styles.image_container}>
         <Link href={`/product/${_id}`}>
           <img className={styles.image} src={images[0]} />
