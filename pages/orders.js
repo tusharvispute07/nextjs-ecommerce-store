@@ -4,7 +4,6 @@ import OrderBox from "@/components/Orderbox";
 import styles from "@/styles/Orders.module.css"
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 export default function OrdersPage(){
@@ -55,10 +54,11 @@ export default function OrdersPage(){
                     </div>
                     {orders.length>0 ? orders.map(order=> 
                         (<OrderBox
+                            key={order._id.toString()}
                             order={order}
                             />))
                         :
-                        <p className={styles.title_container}>You don't have any orders to display.</p>
+                        <p className={styles.title_container}>You don&apos;t have any orders to display.</p>
                         
                         }          
             </div>

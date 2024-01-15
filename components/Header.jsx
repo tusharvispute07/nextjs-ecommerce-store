@@ -109,8 +109,8 @@ export default function Header(){
                                             <Link href={'/category'+parentElement.url||''}><p>{parentElement.name}</p></Link>
                                             {parentElement.children && (
                                                 <ul className={styles.nav_list_child}>
-                                                    {parentElement.children.map((childElement) => (
-                                                        <Link href={'/category'+childElement.url||''}><li id={styles.nav_item_child}key={childElement._id} onClick={()=>setMobileNavToggle(!mobileNavToggle)}>{childElement.name}</li></Link>
+                                                    {parentElement.children.map((childElement,index) => (
+                                                        <Link key={index} href={'/category'+childElement.url||''}><li id={styles.nav_item_child}key={childElement._id} onClick={()=>setMobileNavToggle(!mobileNavToggle)}>{childElement.name}</li></Link>
                                                     ))}
                                                 </ul>
                                             )}

@@ -48,8 +48,8 @@ export default function BagProduct(
                         <div className={styles.property_container}>
                             <p className={styles.property}>Price: Rs. {product.price}</p>
                             <div>
-                                {Object.keys(properties).map(key => (
-                                    <p className={styles.property}>{key}:{properties[key]} </p>
+                                {Object.keys(properties).map((key,index) => (
+                                    <p key={index} className={styles.property}>{key}:{properties[key]} </p>
                                 ))}
                             </div>
                         </div>  

@@ -10,8 +10,8 @@ export default function OrderBox({order}){
                 <p><span id={styles.title}>Placed on:</span> {(new Date(order.createdAt)).toLocaleDateString()}</p>
             </div>
             
-            {order.line_items.map(item => (
-                <div className={styles.product_container}>
+            {order.line_items.map((item, index) => (
+                <div key={index} className={styles.product_container}>
                     <div className={styles.product_container_left}>
                         <img className={styles.product_image} src={item.price_data.product_data.metadata.image} alt="" />
                         <div className={styles.product_details}>

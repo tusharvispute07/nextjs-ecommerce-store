@@ -71,8 +71,8 @@ export default function Collection({products, navData}){
                 <div className={styles.sub_categories}>
                     {navData.map((parentElement) => (
                         parentElement.children?.length>0 && (
-                            parentElement.children.map(childElement => (
-                                <Link href={'/category/'+childElement.url}>{childElement.name}</Link>
+                            parentElement.children.map((childElement,index) => (
+                                <Link key={index} href={'/category/'+childElement.url}>{childElement.name}</Link>
                             ))
                         )
                     ))}
@@ -84,13 +84,13 @@ export default function Collection({products, navData}){
                             <p className={styles.category_title}>Categories</p>
                             <div className={styles.category_content}>
                                 <ul className={styles.nav_list_parent}>
-                                    {navData.map((parentElement) => (
+                                    {navData.map((parentElement, index) => (
                                         <li id={styles.nav_item_parent} key={parentElement._id}>
                                             <Link href={'/category'+parentElement.url||''}><p>{parentElement.name}</p></Link>
                                             {parentElement.children && (
                                                 <ul className={styles.nav_list_child}>
-                                                    {parentElement.children.map((childElement) => (
-                                                        <Link href={'/category'+childElement.url||''}><li id={styles.nav_item_child}key={childElement._id}>{childElement.name}</li></Link>
+                                                    {parentElement.children.map((childElement, index) => (
+                                                        <Link key={index} href={'/category'+childElement.url||''}><li id={styles.nav_item_child}key={childElement._id}>{childElement.name}</li></Link>
                                                     ))}
                                                 </ul>
                                             )}
@@ -152,8 +152,8 @@ export default function Collection({products, navData}){
                     </div>
                 <div className={styles.wrapper_container}>
                     <div className={styles.products_container}>
-                        {currentItems?.length>0 && currentItems.map(item =>(
-                            <ProductBox {...item}/>
+                        {currentItems?.length>0 && currentItems.map((item,index) =>(
+                            <ProductBox key={index} {...item}/>
                         ))}
                     </div>
                     {!currentItems?.length>0 &&

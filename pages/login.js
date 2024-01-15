@@ -138,7 +138,7 @@ export default function Login(){
                     </button>
                     :
                     <button onClick={()=>setIsRegistering(!isRegistering)} className={styles.register_link} href={""}>
-                    Login'
+                    Login
                     </button>
                     }
                     
