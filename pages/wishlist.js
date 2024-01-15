@@ -49,7 +49,7 @@ export default function WishlistPage(){
                 <div className={styles.products_container}>
 
                     {products.length>0 && products.map(product => (
-                        <ProductBox {...product} />
+                        <ProductBox key={product._id.toString()} {...product} />
                     ))}
                     
                 </div>
