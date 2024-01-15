@@ -1,0 +1,50 @@
+.wrapper_container{
+    display: flex;
+    justify-content: center;
+}
+.nav_container{
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    
+}
+.user_details{
+    background-color: #363636;
+    color: #f4f4f4;
+    padding: 20px 40px;
+}
+.user_name{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.navigation_list{
+    margin-top: 40px;
+}
+.navigation_list li{
+    list-style: none;
+    margin-bottom: 40px;
+    color: #363636;
+    font-size: large;
+    text-align: left;
+    
+}
+.navigation_list button{
+    margin-bottom: 80px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #363636 ;
+    border-radius: 4px;
+    color: #f4f4f4;
+
+}
+.user_email{
+    font-size: small;
+    
+}
+.navigation_list i{
+    margin-right: 10px;
+}

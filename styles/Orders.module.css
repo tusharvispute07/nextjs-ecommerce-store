@@ -1,0 +1,36 @@
+.page_container{
+     padding-top: 100px;
+     margin-bottom: 100px;
+}
+.title_container{
+     text-align: center;
+     margin-bottom: 20px;
+}
+#svg{
+     width: 30px;
+     height: 30px;
+     color: #363636;
+ }
+ .page_title{
+     margin: 0;
+     color: #363636;
+     font-weight: bold;
+     margin-top: 5px;
+ }
+.orders_container{  
+     display: flex;
+     flex-direction: column;
+}
+
+@media screen and (max-width:768px){
+     .page_container{
+          padding-top: 30px;
+     }
+     .orders_container{
+          margin-right: 10px;
+     }
+     #svg{
+          width: 25px;
+          height: 25px;
+     }
+}

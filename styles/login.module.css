@@ -1,0 +1,99 @@
+
+.page_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    margin: auto;
+}
+.login_container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 30px;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.1);
+    
+}
+#logo{
+    width: 120px;
+    align-self: center;
+    margin-bottom: 30px;
+}
+.submit_button{
+    font-size: small;
+    color: white;
+    background-color: #363636;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.page_container input{
+    background-color: #F4F4F4;
+    min-width: 200px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+.page_container input:focus{
+    border-style: none;
+    outline: none;
+}
+.page_container span{
+    margin-top: 20px;
+    font-size: small;
+}
+.register_link{
+    background: transparent;
+    border: none;
+    font-size: small;
+    font-weight: bold;
+    color: #363636;
+    margin-top: 2px;
+}
+.register_link:hover{
+    cursor: pointer;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    height: 30px;
+    border-bottom: solid #363636 2px;
+    
+}
+#svg{
+    width: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.google_link{
+    display: flex;
+    background-color: #D3D3D3;
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.google_svg{
+    width: 20px;
+    height: 15px;
+    
+    padding: 10px;
+}
+.google_link p{
+    color: #363636;
+    margin: 0;
+    align-self: center;
+    font-size: small;
+    font-weight: bold;
+}
+

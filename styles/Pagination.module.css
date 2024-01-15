@@ -1,0 +1,39 @@
+.navigation_container{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+}
+.navigation_button{
+   padding: 8px 12px;
+   border-style: none;
+   border-radius: 4px;
+   background-color: #363636;
+   color: white;
+}
+.navigation_button:hover{
+    background-color: #363636d2;
+}
+#next{
+    margin-left: 5px;
+}
+.page_numbers{
+    margin-left: 5px;
+    background-color: white;
+    border-style: none;
+    padding: 8px 12px ;
+    border-radius: 4px;
+}
+.page_numbers:hover{
+    background-color: #CCCCCC;
+}
+.active{
+    background-color: #363636;
+    color: white;
+}
+
+@media screen and (max-width:425px){
+    .navigation_container{
+        width: auto;
+    }
+}

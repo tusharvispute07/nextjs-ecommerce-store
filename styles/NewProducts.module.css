@@ -1,0 +1,17 @@
+.products_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 80px;
+    padding-top:0px;
+    margin: auto;
+    max-width: 1200px;
+
+}
+.title p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    color: #363636;
+    margin-bottom: 50px;
+}

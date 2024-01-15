@@ -1,0 +1,121 @@
+.collection_container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    flex-direction: row;
+    margin-top: 80px;
+    padding-top: 20px;
+}
+.products_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top:0px;
+    overflow: hidden;
+    padding-right: 20px;
+}
+.wrapper_container{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: small;
+    margin-top: 90px;
+    text-align: center;
+    color: #363636;   
+}
+.side_bar{
+    background-color: white;
+    color: #363636;
+    border-radius: 5px;
+    padding: 5px 0px;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    min-height: 100vh ;
+}
+.side_bar a{
+    color: #363636;
+}
+#filter{
+    margin-top: 50px;
+}
+.categories{
+    padding-right: 40px;
+    padding-left: 0px;
+}
+.category_title{
+    padding: 4px 8px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #363636;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.category_content{
+    font-size: medium;
+}
+.nav_list_parent,
+.nav_list_child{
+    list-style: none;
+    padding-left:0px
+}
+.nav_list_parent a p{
+    font-weight: bold;
+}
+
+#nav_item_child{
+    margin-top: 10px;
+    
+}
+.sub_categories{
+    display: none;
+}
+.price_filter input,
+.price_filter label{
+    display: block;
+}
+#checkbox_inputs{
+    margin-bottom: 5px;
+}
+.no_products{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px){
+    .sub_categories{
+        display: flex;
+        flex-direction: row;
+        font-size: small;
+        margin: 0;
+        margin-top: 60px;
+        justify-content: space-evenly;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .sub_categories a{
+        color: #363636;
+        background-color: #F4F4F4;
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+    .collection_container{
+        display: flex;
+        margin-top: 0;
+        margin-right: 5px ;
+        margin-left: 5px ;
+
+    }
+    .products_container{
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0px;
+        margin: 0px 10px;
+    
+    }
+    .side_bar{
+        display: none;
+    }
+}

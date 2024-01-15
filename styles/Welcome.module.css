@@ -1,0 +1,16 @@
+.container{
+    text-align: center;
+    padding: 40px 0px;
+    font-size: .9rem;
+    background-color: white;
+}
+.title{
+    font-weight: 600;
+}
+@media screen and (max-width:425px){
+    .container{
+        padding: 25px 0px;
+        padding-bottom: 0;
+    }
+
+}

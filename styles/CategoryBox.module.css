@@ -1,0 +1,28 @@
+
+.image{
+    width: 100%;
+    vertical-align: top;
+    transition: transform ease 0.3s;
+}
+.title h2{
+    text-align: center;
+}
+.category_title p{
+    text-align: center;
+}
+.image_container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;  
+    border-radius: 5px;
+    max-width: 100%
+}
+
+.image_container,
+.image{
+    box-sizing: border-box;
+}
+.image_container:hover .image{
+    transform: scale(1.2);
+    transform-origin: center center;
+}

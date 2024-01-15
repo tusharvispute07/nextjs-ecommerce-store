@@ -1,0 +1,63 @@
+.wrapper{
+    position: relative;
+    max-width: 400px;
+    height: fit-content;
+    margin-left: 20px;
+}
+.card{
+    max-width: 400px;
+   position: relative;
+}
+.image{
+    max-width: 400px;
+    margin: auto;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    
+  }
+  #next, #prev{
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+  }
+  #next{
+    
+    right: 0;
+  }
+  #prev{
+    left:0;
+  }
+  #svg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-15px) translateY(15px);
+    width: 25px;
+    height: 25px;
+    color: white;
+    
+  }
+
+  @media screen and (max-width:425px){
+    .wrapper{
+      max-width: 380px;
+      align-self: center;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    .card{
+      max-width: 380px;
+      overflow: hidden;
+    }
+    .image{
+      max-width: 380px;
+      
+    }
+  }

@@ -1,0 +1,312 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F4F4F4;
+    padding: 15px 0px;
+    margin: auto;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 1200px;
+    box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.1), 0 -8px 8px -6px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+}
+.logo{
+    align-self: center;
+    font-weight: 600;
+    color: #363636;
+    padding: 5px 8px;;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.nav{
+    position: relative;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav a{
+    color: #363636;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: ease .3s;
+    font-size: .7rem;
+}
+.nav a:hover{
+    font-weight: bold;
+}
+
+.user_section{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding: 5px 8px;
+    margin-right: 10px;
+}
+
+.user_section button{
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+#usersection_svg{
+    width: 18px;
+    height: auto;
+    color: #363636;
+}
+.bag_container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.bag_count{
+    color: #363636;
+    position: absolute;
+    font-size: .6rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+.categories{
+    display: inline-flex;
+}
+.nav_menu{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    background-color:white;
+    color: #f4f4f4;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    margin: 0px;
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    max-height: 250px;
+    transform: translateY(-50%);
+    transition: transform .3s ease, opacity .3s ease;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.categories:hover{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;  
+}
+
+.categories:hover .nav_menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.mobile_nav{
+    display: none;
+}
+.nav_toggle_button{
+    display: none;
+}
+
+.logo_container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.usersection_dropdown{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    gap: 15px;
+    margin-top: 30px;
+    border-radius: 4px;
+    font-size: small;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-25%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+.usersection_dropdown a{
+    color: #363636;
+}
+.usersection_dropdown a:hover{
+    color: #D21F3C;
+}
+.usersection_dropdown p{
+    margin: 0;
+    font-size: large;
+}
+.toggle_user_dropdown{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.searchbar{
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.toggle_searchbar{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.searchbar input{
+    width: 120px;
+    height: 25px;
+    border: none;
+    border-radius: 4px;
+}
+.searchbar input:focus{
+    border: solid #E3E3E3 1px;
+    outline: none;
+}
+.searchbar input::placeholder{
+    text-align: center;
+    font-family: 'barlow';
+    font-size: smaller;
+}
+.user_section button:hover,
+.user_section a:hover{
+    cursor: pointer;
+}
+#signin_button,
+#signout_button{
+    font-weight: bold;  
+    font-size: small; 
+    
+}
+#signin_button:hover,
+#signout_button:hover{
+    cursor: pointer;
+}
+#signout_button{
+    border-style: none;
+    background: transparent;
+}
+
+  
+  @media screen and (max-width:767px){
+    .nav{
+        display: none;
+    }
+    .header{
+        width: 100%;
+    }
+    .nav_toggle_button{  
+      display: inline;
+      background: transparent;
+      border: none;
+      color: black;
+      padding-right: 0;
+      padding-top:5px ;
+      z-index: 2;
+    }
+    .mobile_nav {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 50%;
+        background-color: #f4f4f4;
+        z-index: 1; 
+        padding: 20px;
+        box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(-50%); /* Initially hide off-screen */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        border-radius: 2px;
+        pointer-events: none;
+        
+      }
+      .nav_list_parent,
+      .nav_item_parent,
+      .nav_list_child{
+        list-style-type: none;
+        
+      }
+      .category_title{
+        margin-top: 80px;
+        font-weight: bold;
+        color: #363636;
+        margin-bottom: 0;
+      }
+      .category_content ul{
+        padding-left: 0px;
+        transition: ease .3s;
+      }
+      .category_content a{
+        color: #363636;
+      }
+      .category_content li{
+        margin-bottom: 10px;
+        transition: ease .3s;
+      }
+      .category_content p{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .mobile_nav_toggle{
+        opacity: 1;
+        transform: translateX(0%);
+        pointer-events: auto;
+    }
+    .header{
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+    }
+    .logo{
+        display: none;
+    }
+    .user_section{
+        display: none;
+    }
+    .nav_toggle_button{
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+   
+  }
+
+  @media screen and (max-width:425px){
+    .header{
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+    }
+    .logo{
+        display: none;
+    }
+    .user_section{
+        display: none;
+    }
+    .nav_toggle_button{
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+  }

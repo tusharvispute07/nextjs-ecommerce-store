@@ -1,0 +1,15 @@
+.container p{
+    margin: 0;
+}
+.container label{
+    display: block;
+}
+input[type="range"].minRangeInput::-webkit-slider-runnable-track {
+    background-color: green; /* Change this to the desired track color */
+    height: 5px; /* Set the track height */
+  }
+  
+  input[type="range"].maxRangeInput::-webkit-slider-runnable-track {
+    background-color: green; /* Change this to the desired track color */
+    height: 5px; /* Set the track height */
+  }

@@ -1,0 +1,143 @@
+.page_container{
+    padding-top: 150px;   
+    margin-bottom: 100px;
+}
+.product_container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.product_details{
+    padding-left: 80px;
+    max-width: 600px;
+}
+.product_title{
+    margin: 0;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.product_price{
+    font-size: 1.5rem;
+    margin: 0;
+    margin-top: 10px;
+}
+.price_detail{
+    margin: 0;
+    margin-top: 10px;
+    font-size: .8rem;
+    color: gray;
+}
+
+.property_name{
+    margin-top: 20px;
+    font-weight: bold;
+}
+.property_button span{
+    background-color: #FAFAFA;
+    border-style: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 10px;
+}
+.property_button input{
+    display: none;
+}
+.property_button input:checked + span{
+    background-color: #363636;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 10px;
+}
+
+.property_button span:hover{
+    background-color: #F5F5F5;
+}
+.purchase_button{
+    padding: 15px;
+    margin-top: 10px;
+    background-color:#363636;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    
+}
+.purchase_button:hover{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.product_description_title{
+    margin: 0;
+    margin-top: 30px;
+}
+.product_description_content{
+    margin: 0;
+    margin-top: 10px;
+}
+.property_error{
+    visibility: visible;
+    margin: 0;
+    margin-top: 10px;
+    color: rgb(201, 0, 0);
+}
+.bag_button{
+    padding: 15px;
+    margin-top: 10px;
+    background: color #FAFAFA;;
+    color: #363636;
+    border-radius: 8px;
+    border-style: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.bag_button:hover{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button_visible{
+    opacity: 1;
+    transition: opacity 1s ease ;
+}
+#svg{
+    position: absolute;
+    top: 10;
+    right: 100;
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+#svg:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:425px){
+    .page_container{
+        padding-top: 0px;
+        margin-bottom: 60px;
+    }
+    .product_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .product_details{
+        padding-left: 0px;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .product_title,
+    .product_price{
+        font-size: 1.2rem;
+    }
+    .purchase_button,
+    .bag_button{
+        width: 100%;
+    }
+    .product_description_content{
+        margin-bottom: 50px;
+    }
+}
