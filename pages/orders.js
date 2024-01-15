@@ -53,6 +53,7 @@ export default function OrdersPage(){
                     </div>
                     {orders.length>0 ? orders.map(order=> 
                         (<OrderBox
+                            key={order._id.toString()}
                             order={order}
                             />))
                         :
