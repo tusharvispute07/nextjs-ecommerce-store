@@ -130,7 +130,7 @@ export default function Login(){
             }
                     
                     
-                    <span>{isRegistering?'Already have an account?':"Don't have an account?"}</span>
+                    <span>{isRegistering?'Already have an account?':"Don&rsquo;t have an account?"}</span>
 
                     {isRegistering?
                     <button onClick={()=>setIsRegistering(!isRegistering)} className={styles.register_link} href={""}>
