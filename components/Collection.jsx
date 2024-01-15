@@ -3,7 +3,6 @@ import ProductBox from "./ProductBox"
 import styles from "@/styles/Collection.module.css"
 import { useState, useMemo } from "react"
 import Pagination from "./Pagination"
-import RangeSelector from "./RangeSelector"
 import Link from "next/link"
 
 export default function Collection({products, navData}){

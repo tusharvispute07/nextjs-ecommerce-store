@@ -1,6 +1,5 @@
-import Center from "@/components/Center";
 import Header from "@/components/Header";
-import OrderBox from "@/components/Orderbox";
+import OrderBox from "@/components/OrderBox";
 import styles from "@/styles/Orders.module.css"
 import axios from "axios";
 import { useSession } from "next-auth/react";
@@ -54,7 +53,6 @@ export default function OrdersPage(){
                     </div>
                     {orders.length>0 ? orders.map(order=> 
                         (<OrderBox
-                            key={order._id.toString()}
                             order={order}
                             />))
                         :

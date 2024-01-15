@@ -1,4 +1,4 @@
-import Center from "./Center";
+
 import styles from "@/styles/NewProducts.module.css"
 import ProductBox from "./ProductBox";
 

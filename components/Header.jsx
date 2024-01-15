@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from '@/styles/Header.module.css'
-import Center from "./Center";
 import { useContext, useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react"
 import { BagContext } from "./BagContext";

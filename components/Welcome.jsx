@@ -1,5 +1,4 @@
 import styles from '@/styles/Welcome.module.css'
-import Center from './Center'
 
 export default function Welcome(){
     

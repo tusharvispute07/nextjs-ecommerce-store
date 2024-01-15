@@ -1,8 +1,6 @@
 import Featured from "@/components/Featured";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SimpleSlider from "@/components/IndexPageCarousel";
-import NewProducts from "@/components/NewProducts";;
 import SaleBanner from "@/components/SaleBanner";
 import Welcome from "@/components/Welcome";
 import { mongooseConnect } from "@/lib/mongoose";

@@ -1,5 +1,4 @@
 import styles from "@/styles/Footer.module.css"
-import Center from "./Center"
 
 export default function Footer(){
     

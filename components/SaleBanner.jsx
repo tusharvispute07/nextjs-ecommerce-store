@@ -1,5 +1,5 @@
 import styles from '@/styles/SaleBanner.module.css'
-import Center from './Center'
+
 
 export default function SaleBanner(){
 

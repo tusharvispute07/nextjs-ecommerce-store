@@ -1,4 +1,4 @@
-import Center from "./Center";
+
 import styles from '@/styles/Featured.module.css'
 import Link from "next/link";
 

@@ -1,4 +1,3 @@
-import Center from "@/components/Center"
 import Header from "@/components/Header"
 import styles from "@/styles/Wishlist.module.css"
 import { WishlistContext } from "@/components/WishlistContext"

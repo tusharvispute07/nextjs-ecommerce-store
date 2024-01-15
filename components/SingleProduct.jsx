@@ -2,7 +2,6 @@ import styles from '@/styles/SingleProduct.module.css'
 
 import { useContext, useState, useEffect } from 'react'
 import { BagContext } from './BagContext'
-import { WishlistContext } from './WishlistContext'
 import Link from 'next/link'
 
 import SingleProductSlider from './SingleProductSlider'

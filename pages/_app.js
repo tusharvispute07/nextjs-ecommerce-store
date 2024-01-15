@@ -3,7 +3,6 @@ import { WishlistContextProvider } from '@/components/WishlistContext'
 import '@/styles/globals.css'
 import Head from 'next/head'
 import { SessionProvider } from "next-auth/react"
-import Center from '@/components/Center'
 import Layout from '@/components/Layout'
 import { NavDataContextProvider } from '@/components/NavDataContext'
 
