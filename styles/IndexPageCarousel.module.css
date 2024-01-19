@@ -10,7 +10,7 @@
   position: relative;
   margin-bottom: 100px;
 }
-.card{
+.card {
   text-align: center;
 }
 .image {
@@ -36,7 +36,7 @@
     margin: 0px 10px;
     margin-bottom: 100px;
   }
-  .image,.card{
+  .image,.card a{
     width: 150px;
   }
   .buttons{
