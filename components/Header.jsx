@@ -13,7 +13,6 @@ export default function Header(){
 
     const {bagProducts} = useContext(BagContext)
     const {navPanelData, setNavPanelData} = useContext(NavDataContext)
-    console.log("This is navpanel data",  navPanelData)
 
     const {data: session} = useSession()
     let user;

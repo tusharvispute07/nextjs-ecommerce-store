@@ -57,11 +57,13 @@ const SimpleSlider = ({ images, ids }) => {
       <div className={styles.wrapper}>
         <Slider {...settings}>
           {imagesArray.map((image, index) => (
-            <Link href={`/product/${idsArray[index]}`}>
-            <div key={index} className={styles.card}>
-              <img className={styles.image} src={image} alt="" />
+            <div>
+              <Link href={`/product/${idsArray[index]}`}>
+                <div key={index} className={styles.card}>
+                  <img className={styles.image} src={image} alt="" />
+                </div>
+              </Link>
             </div>
-            </Link>
           ))}
         </Slider>
       </div>

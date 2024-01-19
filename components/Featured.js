@@ -3,7 +3,6 @@ import styles from '@/styles/Featured.module.css'
 import Link from "next/link";
 
 export default function Featured({settingsData}){
-    console.log("This is the headerbanner",settingsData.headerBanner)
     return(
             <div className={styles.featured_product}>
                 <img src={settingsData.headerBanner} alt="" />

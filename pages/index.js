@@ -8,7 +8,6 @@ import { Product } from "@/models/product";
 import { Setting } from "@/models/setting";
 
 export default function HomePage({images,ids, settingsData}){
-  console.log(images)
   return (
       <div>
         <Header />
@@ -27,7 +26,6 @@ export async function getServerSideProps(){
   const newProducts = await Product.find({}, null, {sort:{'_id':-1},limit:8})
   const images = newProducts.map(product => product.images[0])
   const ids = newProducts.map(product => product._id.toString())
-  console.log(ids)
   return {
     props:{
       images: images,
