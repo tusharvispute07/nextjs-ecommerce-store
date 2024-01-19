@@ -4,8 +4,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from '@/styles/IndexPageCarousel.module.css';
 import debounce from 'lodash/debounce';
+import Link from 'next/link';
 
-const SimpleSlider = ({ images }) => {
+const SimpleSlider = ({ images, ids }) => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 0
   );
@@ -13,6 +14,7 @@ const SimpleSlider = ({ images }) => {
   const [isMounted, setIsMounted] = useState(false)
 
   const [imagesArray, setImagesArray] = useState(images);
+  const [idsArray, setIdsArray] = useState(ids)
 
   useEffect(()=>{
     setIsMounted(true)
@@ -55,9 +57,11 @@ const SimpleSlider = ({ images }) => {
       <div className={styles.wrapper}>
         <Slider {...settings}>
           {imagesArray.map((image, index) => (
+            <Link href={`/product/${idsArray[index]}`}>
             <div key={index} className={styles.card}>
               <img className={styles.image} src={image} alt="" />
             </div>
+            </Link>
           ))}
         </Slider>
       </div>

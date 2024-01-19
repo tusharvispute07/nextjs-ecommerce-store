@@ -5,16 +5,17 @@ import SaleBanner from "@/components/SaleBanner";
 import Welcome from "@/components/Welcome";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/product";
+import { Setting } from "@/models/setting";
 
-export default function HomePage({newProducts,images}){
+export default function HomePage({images,ids, settingsData}){
   console.log(images)
   return (
       <div>
         <Header />
-        <Featured />
+        <Featured settingsData={settingsData}/>
         <Welcome />r
-        <SaleBanner />
-        <SimpleSlider images={images} />
+        <SaleBanner settingsData={settingsData} />
+        <SimpleSlider images={images} ids={ids} />
       </div>
       
   )
@@ -22,12 +23,16 @@ export default function HomePage({newProducts,images}){
 
 export async function getServerSideProps(){
   await mongooseConnect()
+  const settingsData = await Setting.getSingleton()
   const newProducts = await Product.find({}, null, {sort:{'_id':-1},limit:8})
   const images = newProducts.map(product => product.images[0])
+  const ids = newProducts.map(product => product._id.toString())
+  console.log(ids)
   return {
     props:{
       images: images,
-      newProducts: JSON.parse(JSON.stringify(newProducts))
+      ids:ids,
+      settingsData: JSON.parse(JSON.stringify(settingsData)),
     }
   }
 }

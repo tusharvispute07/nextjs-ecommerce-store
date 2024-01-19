@@ -51,7 +51,6 @@ async function getNavPanelData(urlArray){
         if (children.length===0){
             const newParentCategoryString = urlArray[urlArray.length-2]
             if (newParentCategoryString===undefined){
-                console.log('this is the nav data', parents)
                 return parents
             }
             const newParentCategory = await Category.findOne({name: newParentCategoryString}).lean()

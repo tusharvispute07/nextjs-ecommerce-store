@@ -1,12 +1,12 @@
 import styles from '@/styles/SaleBanner.module.css'
 
 
-export default function SaleBanner(){
+export default function SaleBanner({settingsData}){
 
     return (
         <div className={styles.container}>
             <div className={styles.card_1}>
-                <img src="/images/new-style-banner.jpg" alt="" />
+                <img src={settingsData.salesBannerLeft} alt="" />
                 <p>#NEWSTYLE</p>
             </div>
             <div className={styles.card_2}>
@@ -14,7 +14,7 @@ export default function SaleBanner(){
             </div>
 
             <div className={styles.card_3}>
-                <img src="/images/winter-banner.jpg" alt="" />
+                <img src={settingsData.salesBannerRight} alt="" />
                 <p>#WINTERLOOK</p>
             </div>
         </div>
