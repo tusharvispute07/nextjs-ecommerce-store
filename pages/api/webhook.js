@@ -3,7 +3,7 @@ import { Order } from "@/models/order";
 const stripe = require('stripe')(process.env.STRIPE_SK)
 import {buffer} from 'micro'
 
-const endpointSecret = "whsec_f29da90fb32349c76b6d6952af9a9390957b391f25e0be64af1e1a03c79e93ea";
+const endpointSecret = process.env.STRIPE_SIGININ_SECRET;
 
 
 export default async function handler(req, res){
