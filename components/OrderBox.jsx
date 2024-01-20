@@ -6,7 +6,7 @@ export default function OrderBox({order}){
         <div key={order._id.toString()} className={styles.orders_container}>
             <div className={styles.order_title_container}>
                 <p><span id={styles.title}>Order ID:</span> {order._id.toString()}</p>
-                <p><span id={styles.title}>Order Status:</span> <span>Confirm</span></p>
+                <p><span id={styles.title}>Order Status:</span> <span>{order.order_status}</span></p>
                 <p><span id={styles.title}>Placed on:</span> {(new Date(order.createdAt)).toLocaleDateString()}</p>
             </div>
             

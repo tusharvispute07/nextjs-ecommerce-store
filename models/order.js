@@ -12,6 +12,7 @@ const OrderSchema = new Schema({
     pinCode:String,
     address:String,
     country:String,
+    order_status:{type:String},
     paid:{type:Boolean}
 }, {
     timestamps:true,
