@@ -23,7 +23,9 @@ export default async function handler(req, res){
   switch (event.type) {
     case 'checkout.session.completed':
       const data = event.data
-      console.log(data)
+      console.log("This is the event", event)
+      console.log("This is the data", event.data)
+      console.log("This is the object", event.data.object)
       const orderId = data.metadata.orderId
       const paid = data.payment_status === 'paid'
       if (orderId && paid){
