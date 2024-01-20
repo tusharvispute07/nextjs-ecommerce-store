@@ -21,7 +21,7 @@ export default function Bag({ products}) {
     const [name, setName] = useState('')
     const [mobileNumber, setMobileNumber] = useState('')
     const [addressLine1, setAddressLine1] = useState('')
-    const [addressline2, setAddressLine2] = useState('')
+    const [addressLine2, setAddressLine2] = useState('')
     const [pincode, setPincode] = useState('')
     const [city, setCity] = useState('')
     const [state, setState] = useState('')
@@ -94,7 +94,7 @@ export default function Bag({ products}) {
         !name.trim() ||
         !mobileNumber.trim() ||
         !addressLine1.trim() ||
-        !addressline2.trim() ||
+        !addressLine2.trim() ||
         !pincode.trim() ||
         !city.trim() ||
         !state.trim() ||
@@ -106,7 +106,7 @@ export default function Bag({ products}) {
 
       const email = session.user.email
       const response = await axios.post('/api/checkout',{
-        name,email,mobileNumber,addressLine1,addressline2,pincode,city,state,country,
+        name,email,mobileNumber,addressLine1,addressLine2,pincode,city,state,country,
         bagProducts
       })
       if (response.data.url){
@@ -194,7 +194,7 @@ export default function Bag({ products}) {
             <input id={styles.address} type="text" placeholder="Apartment / Building" name="addressLine1"
             value={addressLine1} onChange={ev => setAddressLine1(ev.target.value)} /> 
             <input id={styles.address} type="text" placeholder="Street / Locality / Town" name="addressLine2"
-            value={addressline2} onChange={ev => setAddressLine2(ev.target.value)} />
+            value={addressLine2} onChange={ev => setAddressLine2(ev.target.value)} />
               <div className={styles.pincode_city}>
                 <input type="text" inputMode="numeric" pattern="[0-9]*" placeholder="Pin-code" name="pincode"
                 value={pincode} 
