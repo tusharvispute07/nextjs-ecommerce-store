@@ -134,11 +134,11 @@ export default function Login(){
 
                     {isRegistering?
                     <button onClick={()=>setIsRegistering(!isRegistering)} className={styles.register_link} href={""}>
-                    Register
+                    Login
                     </button>
                     :
                     <button onClick={()=>setIsRegistering(!isRegistering)} className={styles.register_link} href={""}>
-                    Login
+                    Register
                     </button>
                     }
                     

@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/react"
+import { useSession, signOut  } from "next-auth/react"
 import { useRouter } from "next/router"
 
 import styles from '@/styles/User.module.css'
@@ -31,7 +31,7 @@ export default function UserPage(){
                         <Link href={'/bag'}><li>
                             <i class="bi bi-bag-fill"></i>
                             Bag</li></Link>
-                        <Link href={'/bag'}><button>Logout</button></Link>
+                        <button onClick={signOut}>Logout</button>
                     </ul>
                 </div>
             </div>    

@@ -18,7 +18,12 @@ a{
   max-width: 1200px;
   
 }
-
+.loading-spinner{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
