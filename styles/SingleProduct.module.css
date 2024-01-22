@@ -113,6 +113,17 @@
 #svg:hover{
     cursor: pointer;
 }
+.reviews_container{
+    margin-top:100px ;
+    margin-left: 20px;
+    
+}
+.reviews_title{
+    margin-bottom: 20px;
+}
+.reviews_title p{
+    font-weight: bold;   
+}
 
 @media screen and (max-width:425px){
     .page_container{
@@ -138,6 +149,13 @@
         width: 100%;
     }
     .product_description_content{
+        margin-bottom: 50px;
+    }
+    .product_description_title{
+        margin-top: 50px;
+    }
+    .reviews_container{
+        margin-top: 20px;
         margin-bottom: 50px;
     }
 }

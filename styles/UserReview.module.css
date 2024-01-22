@@ -1,0 +1,15 @@
+.stars_rating{
+margin-bottom: 5px;
+}
+.stars_rating input{
+    display: none;
+}
+.stars_rating label{
+    margin-left: 2px;
+}
+.star_icon{
+    margin-left: 10px;
+}
+.review{
+    margin-top: 5px;
+}

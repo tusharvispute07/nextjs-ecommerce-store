@@ -1,0 +1,36 @@
+.container{
+    margin-top: 80px;
+    text-align: center;
+}
+.page_title{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.product_container,
+.ratings_container,
+.review_container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.product_container img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.review_container p,
+.ratings_container p{
+    font-weight: bold;
+}
+.review_container{
+    margin-top: 20px;
+}
+.container button{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #363636;
+    color: white;
+}

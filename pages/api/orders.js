@@ -12,7 +12,6 @@ export default async function(req, res){
             return res.status(404).json({message:"user not found"})
         }
         const orders = await Order.find({user:user._id})
-        console.log("these are the orders", orders)
 
         res.json(orders);
     }catch(error){

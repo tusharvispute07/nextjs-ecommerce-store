@@ -3,14 +3,18 @@ import Link from "next/link";
 import { useContext, useState, useEffect } from "react";
 import { WishlistContext } from "./WishlistContext";
 
-export default function ProductBox({ _id, title, images, description, price }) {
+export default function ProductBox({ _id, title, images, description, price, ratings }) {
   const { wishlistedProducts, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const [starRating, setStarRating] = useState('0.0')
 
   useEffect(() => {
     setIsWishlisted(wishlistedProducts.includes(_id));
   }, [wishlistedProducts, _id]);
 
+  useEffect(()=>{
+    calculateStarRating()
+  },[])
   function wishlistButtonClickHandler() {
     if (isWishlisted) {
       removeFromWishlist(_id);
@@ -18,6 +22,20 @@ export default function ProductBox({ _id, title, images, description, price }) {
       addToWishlist(_id);
     }
   }
+
+  function calculateStarRating(){
+    if (ratings){
+      let totalRating = 0
+      for (const rating of ratings){
+        totalRating+=rating.rating
+      }
+      const ratingAverage = (totalRating/ratings.length).toString()
+      setStarRating(parseFloat(ratingAverage).toFixed(1))
+      return
+      }
+    setStarRating("0.0")
+  }
+  
 
   return (
     <div key={_id.toString()} className={styles.product_container}>
@@ -58,6 +76,17 @@ export default function ProductBox({ _id, title, images, description, price }) {
           <Link href={`/product/${_id}`}>
             <p>{title}</p>
           </Link>
+            <div className={styles.star_rating}>
+              {starRating==="0.0"? (
+              <i class="bi bi-star"></i>
+              ):( 
+                starRating.toString().split('.')[1]!=="0"?(
+                <i class="bi bi-star-half"></i>
+                ) : (
+                <i class="bi bi-star-fill"></i>)
+              )}
+              <span> {starRating}</span>
+            </div>
         </div>
         <div className={styles.price}>
           <p>Rs. {price}</p>

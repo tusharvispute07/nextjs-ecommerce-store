@@ -24,6 +24,15 @@ export async function getServerSideProps({query}){
     product._id = product._id.toString()
     product.category = product.category.toString()
     product.updatedAt = product.updatedAt?product.updatedAt.toString():null
+    product.ratings = product.ratings?(product.ratings.map(rating=>{
+        return {
+            ...rating,
+            user: rating.user.toString(),
+            _id: rating._id.toString(),
+            createdAt: rating.createdAt.toISOString(),
+            updatedAt: rating.updatedAt ? rating.updatedAt.toISOString() : null,
+        }
+      })):null
     return {
         props:{
             product,

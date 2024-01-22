@@ -128,6 +128,15 @@ export async function getServerSideProps({params}){
           _id: product._id.toString(),
           category: product.category.toString(),
           updatedAt: product.updatedAt ? product.updatedAt.toISOString() : null,
+          ratings: product.ratings?(product.ratings.map(rating=>{
+            return {
+                ...rating,
+                user: rating.user.toString(),
+                _id: rating._id.toString(),
+                createdAt: rating.createdAt.toISOString(),
+                updatedAt: rating.updatedAt ? rating.updatedAt.toISOString() : null,
+            }
+          })):null
         };
       });
     

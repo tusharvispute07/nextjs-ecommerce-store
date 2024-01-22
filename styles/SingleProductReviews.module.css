@@ -1,0 +1,31 @@
+.reviews_container{
+    margin-top: 70px;
+}
+.stars_rating{
+    margin-bottom: 5px;
+    }
+    .stars_rating input{
+        display: none;
+    }
+    .stars_rating label{
+        margin-left: 2px;
+    }
+    .star_icon{
+        margin-left: 10px;
+    }
+    .review{
+        margin-top: 5px;
+    }
+    .user{
+        margin: 0;
+        margin-bottom:5px ;
+    }
+    .stars_rating label,
+    .user,
+    .comment{
+        font-size: small;
+    }
+    .comment{
+        margin: 0;
+        margin-top: 10px;
+    }

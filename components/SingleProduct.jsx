@@ -5,6 +5,7 @@ import { BagContext } from './BagContext'
 import Link from 'next/link'
 
 import SingleProductSlider from './SingleProductSlider'
+import SingleProductReviews from './SingleProductReviews'
 
 export default function SingleProduct({product}){
     const {setBagProducts, bagProducts} = useContext(BagContext)
@@ -108,14 +109,21 @@ export default function SingleProduct({product}){
                         }
                     </div>
                     
-                    
-
                     <p className={styles.product_description_title}>Product Description</p>
                     <p className={styles.product_description_content}>
                         {product.description}
                     </p>
                 </div>
              </div>
+             <div className={styles.reviews_container}>
+                <p className={styles.reviews_title}>Ratings & Reviews <i class="bi bi-caret-down"></i></p>
+             {product.ratings?.map( review => (
+                <SingleProductReviews productReview={review} />
+             ) 
+             )}
+             </div>
+             
+             
         </div>
     )
 }

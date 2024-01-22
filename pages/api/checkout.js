@@ -73,7 +73,8 @@ export default async function handler(req, res){
                         metadata: {
                             size: item.properties.size,
                             color: item.properties.color,
-                            image: product.images[0]
+                            image: product.images[0],
+                            product_id: product._id.toString()
                         },
                     },
                     unit_amount: unitAmountInPaise

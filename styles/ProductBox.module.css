@@ -29,6 +29,10 @@
     margin: 0;
     margin-top: 10px;
 }
+.star_rating{
+    font-size: small;
+    margin-top: 5px;
+}
 .price p{
     margin:0;
     font-size: small;
