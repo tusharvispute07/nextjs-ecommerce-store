@@ -117,12 +117,14 @@ export default function SingleProduct({product}){
              </div>
              <div className={styles.reviews_container}>
                 <p className={styles.reviews_title}>Ratings & Reviews <i class="bi bi-caret-down"></i></p>
-             {product.ratings?.map( review => (
+             {product.ratings?.length>0? product.ratings.map( review => (
                 <div key={review._id}>
                     <SingleProductReviews productReview={review} />
                 </div>
              ) 
-             )}
+             ):
+             <p className={styles.no_reviews}>No reviews on this product yet.</p>
+             }
              </div>
              
              

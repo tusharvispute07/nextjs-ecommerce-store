@@ -124,7 +124,9 @@
 .reviews_title p{
     font-weight: bold;   
 }
-
+.no_reviews{
+    font-size: small;
+}
 @media screen and (max-width:425px){
     .page_container{
         padding-top: 0px;

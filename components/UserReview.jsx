@@ -6,9 +6,7 @@ import { useSession } from "next-auth/react";
 export default function UserReview({ productId, userId, setComment }) {
 
   const {data: session} = useSession()
-  if(session){
-    const username = session.user.name
-  }
+  
 
   const [ratings, setRatings] = useState(0);
   const [starsState, setStarsState] = useState({
@@ -46,6 +44,7 @@ export default function UserReview({ productId, userId, setComment }) {
   }, []);
 
   async function updateProductRating(productId, userId, star) {
+    const username = session.user.name
     const data = {
       productId: productId,
       userId: userId,

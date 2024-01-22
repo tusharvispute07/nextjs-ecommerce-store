@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function Login(){
     const router = useRouter()
     const [isRegistering, setIsRegistering] = useState(false)
-    
+    const [isHandleRegister, setIsHandleRegister] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         username: '',
@@ -27,9 +27,11 @@ export default function Login(){
     
     async function handleRegister(event){
         event.preventDefault()
+        setIsHandleRegister(true)
         try{
             const response = await axios.post('/api/register',formData)
-            console.log(response.data)
+            setIsHandleRegister(false)
+            setIsRegistering(false)
         }catch(error){
             console.log(error)
         }
@@ -124,7 +126,7 @@ export default function Login(){
                     <input id={styles.login_inputs} type="password" placeholder="Password" onChange={(ev) => handleChange('password', ev.target.value)}  />
                 </div>
             </div>
-            <button type="submit" className={styles.submit_button} href={""}>{isRegistering?'Register':'Login'}</button>
+            <button type="submit" className={styles.submit_button} href={""}>{isRegistering?( isHandleRegister?'please wait...':'Register'):'Login'}</button>
             </form>
                     
             }

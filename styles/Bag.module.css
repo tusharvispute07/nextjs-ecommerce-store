@@ -11,6 +11,7 @@
 }
 .empty_bag h2,
 .empty_bag p{
+    margin-top:10px;
     color: #363636;
 }
 .empty_bag button{
@@ -24,9 +25,16 @@
     cursor: pointer;
 }
 #empty_bag_svg{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin-top: 30px;
+}
+.empty_bag_title{
+    margin: 0;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #363636;
+    font-size: 1rem; 
 }
 .box_container{
     background-color:#F4F4F4 ;
@@ -139,6 +147,9 @@
     .contact_details input{
         box-sizing: border-box;
         width: 100%;
+    }
+    .loader{
+        text-align: center;
     }
 
 @media screen and (max-width:425px){

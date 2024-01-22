@@ -28,7 +28,7 @@ export default function SingleProductReviews({productReview}){
 
     return(
         <div className={styles.container}>
-            <p className={styles.user}><i class="bi bi-person-fill"></i> Tushar Vispute</p>
+            <p className={styles.user}><i class="bi bi-person-fill"></i> {productReview.username}</p>
             <div className={styles.stars_rating}>
                 {[1, 2, 3, 4, 5].map((star) => (
                 <label key={star} htmlFor={`star${star}-${productReview.user}`}>

@@ -25,8 +25,7 @@
     margin-top: 10px;
     font-weight: bold;
     color: #363636;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem; 
 }
 .title_container_empty button{
     background-color: #363636;
@@ -40,6 +39,7 @@
     #svg{
         width: 25px;
         height: 25px;
+        margin-bottom: 10px;
     }
     .page_container{
         margin-top: 20px;
@@ -56,7 +56,8 @@
         margin-top: 5px;
     }
     .title_container_empty .sub_title{
-        margin-bottom:30px;
+        margin-bottom:20px;
         margin-top: 10px;
     }
+   
 }
