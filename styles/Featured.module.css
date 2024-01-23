@@ -86,6 +86,6 @@
         border-radius: 4px;
         overflow: visible;
         object-fit:none;
-        transform: scale(.3) translateY(600%) translateX(-100%);
+        transform: scale(.3) translateY(600%) translateX(-120%);
       }
 }

@@ -34,9 +34,17 @@ const SimpleSlider = ({ images, ids }) => {
   }, []);
 
   const getSlidesToShow = () => {
-    if (isMounted){
-      return windowWidth <= 425 ? 2 : 5;
-    }
+    if (isMounted) {
+      if (windowWidth <= 425) {
+          return 2;
+      } else if (windowWidth > 425 && windowWidth <= 768) {
+          return 3;
+      } else if (windowWidth > 768 && windowWidth <= 1200) {
+          return 4;
+      } else {
+          return 5;
+      }
+  }
     
   };
 

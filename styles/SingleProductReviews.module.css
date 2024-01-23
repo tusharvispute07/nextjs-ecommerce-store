@@ -1,3 +1,6 @@
+.container{
+    margin-bottom: 20px;
+}
 .reviews_container{
     margin-top: 70px;
 }
@@ -18,7 +21,8 @@
     }
     .user{
         margin: 0;
-        margin-bottom:5px ;
+        margin-bottom: 5px;
+        
     }
     .stars_rating label,
     .user,
